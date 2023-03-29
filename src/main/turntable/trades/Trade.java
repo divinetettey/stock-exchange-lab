@@ -80,6 +80,5 @@ public abstract class Trade {
         return message;
     }
 
-
     public abstract double calcDividend();
 }

@@ -3,12 +3,14 @@ package main.turntable;
 import main.turntable.trades.Trade;
 
 public class Trader {
+
     private String name;
     private Account account;
 
     public Trader() {
         this("", null);
     }
+
     public Trader(String name, Account account) {
         this.name = name;
         this.account = account;
@@ -29,12 +31,34 @@ public class Trader {
         this.account = account;
     }
 
-    /**
-     * add a new trade to the account
-     *
-     * @param trade
-     */
-    public void addTrade(Trade trade){
-        this.account.setTotalTrades(trade.getPrice() * trade.getQuantity());
+    public  void addTrade(Trade trade){
+        double newTotalValue = this.account.getValue() + (trade.getQuantity() * trade.getPrice());
+
+        this.account.setValue(newTotalValue);
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    //    /**
+//     * add a new trade to the account
+//     *
+//     * @param trade
+//     */
+//    public void addTrade(Trade trade){
+//        this.account.setTotalTrades(trade.getPrice() * trade.getQuantity());
+//    }
 }

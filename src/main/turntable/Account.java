@@ -1,21 +1,21 @@
 package main.turntable;
 
 public class Account {
-    private double totalTrades;
+    private double value;
 
     public Account() {
         this(0);
     }
 
-    public Account(double totalTrades) {
-        this.totalTrades = totalTrades;
+    public Account(double value) {
+        this.value = value;
     }
 
-    public double getTotalTrades() {
-        return totalTrades;
+    public double getValue() {
+        return value;
     }
 
-    public void setTotalTrades(double totalTrades) {
-        this.totalTrades = totalTrades;
+    public void setValue(double value) {
+        this.value = value;
     }
 }
