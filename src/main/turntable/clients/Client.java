@@ -1,5 +1,10 @@
 package main.turntable.clients;
 
+import main.turntable.trades.Trade;
+
+import java.time.LocalDate;
+import java.time.chrono.ChronoLocalDate;
+
 public class Client {
     private String firstName;
     private String lastName;
@@ -70,5 +75,13 @@ public class Client {
      */
     public String getFullName(){
         return this.getFirstName()+" "+this.getLastName();
+    }
+
+    /**
+     * add new trade
+     * @param trade
+     */
+    public void addTrade(Trade trade) {
+        trade.setTradeCreatedAt(LocalDate.now());
     }
 }

@@ -28,13 +28,14 @@ public class Exchange {
         printMessage("New Client Added: "+client.getFirstName() + " "+client.getLastName());
 
         BondTrade bondTrade = new BondTrade("BT001","BCP", 10,10.23);
-        printMessage(client.getFullName()+" added new trade: "+bondTrade.toString());
 
 
         Bronze bronze = new Bronze();
         client.setPointsGained(1);
         client.setMembershipType(bronze);
+        client.addTrade(bondTrade);
 
+        printMessage(client.getFullName()+" added new trade: "+bondTrade.toString());
         printMessage("Points Gained: "+client.getPointsGained());
     }
 
