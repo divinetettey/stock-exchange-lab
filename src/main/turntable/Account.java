@@ -1,4 +1,4 @@
-package tlc.turntable;
+package main.turntable;
 
 public class Account {
     private double totalTrades;

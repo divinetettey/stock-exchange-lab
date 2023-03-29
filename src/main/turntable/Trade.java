@@ -1,4 +1,4 @@
-package tlc.turntable;
+package main.turntable;
 
 public class Trade {
     private String ID;

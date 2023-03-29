@@ -1,4 +1,4 @@
-package tlc.turntable;
+package main.turntable;
 
 public class Trader {
     private String name;

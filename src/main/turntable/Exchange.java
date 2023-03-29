@@ -1,4 +1,4 @@
-package tlc.turntable;
+package main.turntable;
 
 public class Exchange {
     public static void main(String [] args){
