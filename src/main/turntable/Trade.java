@@ -1,6 +1,6 @@
 package main.turntable;
 
-public class Trade {
+public abstract class Trade {
     private String ID;
     private String symbol;
     private int quantity;
@@ -58,4 +58,6 @@ public class Trade {
     public String toString() {
         return this.ID+":"+this.symbol+":"+this.quantity+":"+this.price;
     }
+
+    public abstract double calcDividend();
 }
