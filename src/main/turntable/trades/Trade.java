@@ -71,11 +71,11 @@ public abstract class Trade {
         this.tradeCreatedAt = tradeCreatedAt;
     }
 
-    
+
     public String toString() {
         String  message = this.ID+":"+this.symbol+":"+this.quantity+":"+this.price;
-        if(this.tradeCreatedAt == null){
-            message += this.tradeCreatedAt.toString();
+        if(this.tradeCreatedAt != null){
+            message += ":"+this.tradeCreatedAt.toString();
         }
         return message;
     }
