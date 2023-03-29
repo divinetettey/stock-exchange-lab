@@ -1,4 +1,4 @@
-package main.turntable;
+package main.turntable.trades;
 
 public class BondTrade  extends  Trade{
     private double dividend;

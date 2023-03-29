@@ -1,5 +1,8 @@
 package main.turntable;
 
+import main.turntable.clients.Client;
+import main.turntable.trades.BondTrade;
+
 public class Exchange {
     public static void main(String [] args){
         System.out.println("Welcome To Exchange");
@@ -18,6 +21,12 @@ public class Exchange {
 //        printMessage("Trade: "+bondTrade.toString());
 //        printMessage("Bond Dividend: "+bondTrade.calcDividend());
 
+        //create a new client
+        Client client = new Client("Sheldon", "Cooper");
+        printMessage("New Client Added: "+client.getFirstName() + " "+client.getLastName());
+
+        BondTrade bondTrade = new BondTrade("BT001","BCP", 10,10.23, 10.4);
+        printMessage(client.getFullName()+" added new trade: "+bondTrade.toString());
     }
 
     private static void printMessage(String message){

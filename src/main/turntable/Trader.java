@@ -1,5 +1,7 @@
 package main.turntable;
 
+import main.turntable.trades.Trade;
+
 public class Trader {
     private String name;
     private Account account;

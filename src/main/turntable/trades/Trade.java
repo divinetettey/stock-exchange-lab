@@ -1,4 +1,4 @@
-package main.turntable;
+package main.turntable.trades;
 
 public abstract class Trade {
     private String ID;
