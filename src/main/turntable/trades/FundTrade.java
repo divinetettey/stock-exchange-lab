@@ -5,7 +5,7 @@ public class FundTrade extends Trade {
 
     public FundTrade(String ID, String symbol, int quantity, double price, double dividend){
         super(ID, symbol,quantity,price);
-        this.dividend = dividend;
+        this.dividend = 19;
     }
 
     /**
@@ -17,7 +17,6 @@ public class FundTrade extends Trade {
         if(this.dividend > 100 || this.dividend <  0){
             return this.getPrice();
         }
-
 
         return this.getPrice() * (this.dividend/100);
     }

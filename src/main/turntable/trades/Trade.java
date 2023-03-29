@@ -52,7 +52,11 @@ public abstract class Trade {
     }
 
     public void setPrice(double price) {
-        this.price = price;
+        if(price <= 0.0){
+            this.price = 0.0;
+        } else{
+            this.price = price;
+        }
     }
 
     public String toString() {

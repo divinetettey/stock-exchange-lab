@@ -1,6 +1,8 @@
 package main.turntable;
 
+import main.turntable.clients.Bronze;
 import main.turntable.clients.Client;
+import main.turntable.clients.MembershipType;
 import main.turntable.trades.BondTrade;
 
 public class Exchange {
@@ -25,8 +27,15 @@ public class Exchange {
         Client client = new Client("Sheldon", "Cooper");
         printMessage("New Client Added: "+client.getFirstName() + " "+client.getLastName());
 
-        BondTrade bondTrade = new BondTrade("BT001","BCP", 10,10.23, 10.4);
+        BondTrade bondTrade = new BondTrade("BT001","BCP", 10,10.23);
         printMessage(client.getFullName()+" added new trade: "+bondTrade.toString());
+
+
+        Bronze bronze = new Bronze();
+        client.setPointsGained(1);
+        client.setMembershipType(bronze);
+
+        printMessage("Points Gained: "+client.getPointsGained());
     }
 
     private static void printMessage(String message){
