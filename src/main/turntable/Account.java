@@ -1,7 +1,11 @@
 package main.turntable;
 
+import main.turntable.trades.Trade;
+
 public class Account {
     private double value;
+
+    private Trade[] trades;
 
     public Account() {
         this(0);

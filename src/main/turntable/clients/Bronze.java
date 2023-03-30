@@ -3,13 +3,11 @@ package main.turntable.clients;
 import main.turntable.trades.Trade;
 
 import java.time.LocalDateTime;
-import java.time.chrono.ChronoLocalDate;
 
 public class Bronze extends MembershipType{
     private final int MAX_TRADES_PER_DAY = 5;
     public Bronze()
     {
-        this.setMinPoints(1);
         this.setMaxPoints(10);
 
         this.setMaxTradesPerDay(MAX_TRADES_PER_DAY);

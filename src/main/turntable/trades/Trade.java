@@ -74,7 +74,7 @@ public abstract class Trade {
 
     public String toString() {
 
-        return "\nTRADE DETAILS" +
+        return "\nTRADE DETAILS " +
                 "\nID: "+ID +
                 "\nSymbol:  "+ symbol +
                 "\nQuantity: "+ quantity +

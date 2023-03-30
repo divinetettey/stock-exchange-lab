@@ -7,6 +7,7 @@ public class MembershipType {
     private int maxPoints;
     private int maxTradesPerDay;
 
+    //TODO: REFACTOR THIS TO CLIENTS
     protected double MAX_TRADE_VALUE = 10000;
 
     public MembershipType() {

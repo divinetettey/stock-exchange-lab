@@ -10,9 +10,6 @@ public class Client {
     private String lastName;
     private int pointsGained;
     private MembershipType membershipType;
-    public Client() {
-        this("","", null);
-    }
 
     /**
      * new client with no membership
@@ -21,20 +18,8 @@ public class Client {
      * @param lastName
      */
     public Client(String firstName, String lastName){
-        this(firstName, lastName, null);
-    }
-
-    /**
-     * member with membership
-     *
-     * @param firstName
-     * @param lastName
-     * @param membershipType
-     */
-    public Client(String firstName, String lastName, MembershipType membershipType) {
         this.firstName = firstName;
         this.lastName = lastName;
-        this.membershipType = membershipType;
     }
 
     public String getFirstName() {
@@ -82,9 +67,12 @@ public class Client {
      * @param trade
      */
     public boolean  addTrade(Trade trade) {
+        if(membershipType == null){
+            return true;
+        }
 
         if(membershipType.canTrade(trade)){
-            this.setPointsGained( pointsGained + 1);
+            pointsGained++;
             return true;
         }
 
