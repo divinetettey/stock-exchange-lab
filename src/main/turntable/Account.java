@@ -8,18 +8,30 @@ public class Account {
     private Trade[] trades;
 
     public Account() {
-        this(0);
+        this.trades = new Trade[10];
     }
 
-    public Account(double value) {
-        this.value = value;
+    public void setTrades(Trade[] trades){
+        this.trades = trades;
     }
 
-    public double getValue() {
-        return value;
+    public Trade[] getTrades(){
+        return this.trades;
     }
 
-    public void setValue(double value) {
-        this.value = value;
+
+    /**
+     * get total value of account 
+     * @return
+     */
+    public double getTotalValues(){
+        double total = 0; 
+        for(int i = 0; i < trades.length;i++){
+            if(trades[i] != null){
+                total += (trades[i].getPrice() * trades[i].getQuantity());
+            }
+        }
+
+        return total;
     }
 }
