@@ -83,10 +83,8 @@ public class Client {
      */
     public boolean  addTrade(Trade trade) {
 
-        double tradeValue = trade.getQuantity() * trade.getPrice();
-        if(membershipType.canTrade(trade.getQuantity(), tradeValue)){
-            trade.setTradeCreatedAt(LocalDate.now());
-
+        if(membershipType.canTrade(trade)){
+            this.setPointsGained( pointsGained + 1);
             return true;
         }
 

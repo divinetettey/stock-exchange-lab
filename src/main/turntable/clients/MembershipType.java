@@ -1,10 +1,13 @@
 package main.turntable.clients;
 
+import main.turntable.trades.Trade;
+
 public class MembershipType {
     private int minPoints;
     private int maxPoints;
     private int maxTradesPerDay;
 
+    protected double MAX_TRADE_VALUE = 10000;
 
     public MembershipType() {
     }
@@ -39,13 +42,13 @@ public class MembershipType {
     }
 
     /**
+     * check if the member is allowed to trade
      *
-     * @param quantity
-     * @param tradeValue
+     * @param trade
      * @return
      */
-    public boolean canTrade(int quantity,double tradeValue){
-        double MAX_TRADE_VALUE = 10000;
-        return (quantity < this.getMaxTradesPerDay())  && (tradeValue < MAX_TRADE_VALUE);
+    public boolean canTrade(Trade trade){
+
+        return trade.getQuantity() < maxTradesPerDay &&   (trade.getQuantity()* trade.getPrice()) < MAX_TRADE_VALUE;
     }
 }

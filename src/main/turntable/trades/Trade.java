@@ -1,6 +1,7 @@
 package main.turntable.trades;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 public abstract class Trade {
     private String ID;
@@ -8,7 +9,7 @@ public abstract class Trade {
     private int quantity;
     private double price;
 
-    private LocalDate tradeCreatedAt;
+    private LocalDateTime tradeCreatedAt;
 
     public Trade() {
 
@@ -19,6 +20,8 @@ public abstract class Trade {
         this.symbol = symbol;
         this.quantity = quantity;
         this.price = price;
+
+        tradeCreatedAt = LocalDateTime.now();
     }
 
     public Trade(String ID, String symbol, int quantity) {
@@ -61,21 +64,22 @@ public abstract class Trade {
         }
     }
 
-    public LocalDate getTradeCreatedAt() {
+    public LocalDateTime getTradeCreatedAt() {
         return tradeCreatedAt;
     }
 
-    public void setTradeCreatedAt(LocalDate tradeCreatedAt) {
+    public void setTradeCreatedAt(LocalDateTime tradeCreatedAt) {
         this.tradeCreatedAt = tradeCreatedAt;
     }
 
-
     public String toString() {
-        String  message = this.ID+":"+this.symbol+":"+this.quantity+":"+this.price;
-        if(this.tradeCreatedAt != null){
-            message += ":"+this.tradeCreatedAt.toString();
-        }
-        return message;
+
+        return "\nTRADE DETAILS" +
+                "\nID: "+ID +
+                "\nSymbol:  "+ symbol +
+                "\nQuantity: "+ quantity +
+                "\nPrice: "+ price +
+                "\nCreated At: "+ tradeCreatedAt.toString();
     }
 
     public abstract double calcDividend();
