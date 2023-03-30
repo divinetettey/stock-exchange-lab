@@ -22,9 +22,7 @@ public abstract class Trade {
     }
 
     public Trade(String ID, String symbol, int quantity) {
-        this.ID = ID;
-        this.symbol = symbol;
-        this.quantity = quantity;
+        this(ID,symbol, quantity, 0.0);
     }
 
     public String getID() {

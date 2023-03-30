@@ -81,7 +81,15 @@ public class Client {
      * add new trade
      * @param trade
      */
-    public void addTrade(Trade trade) {
-        trade.setTradeCreatedAt(LocalDate.now());
+    public boolean  addTrade(Trade trade) {
+
+        double tradeValue = trade.getQuantity() * trade.getPrice();
+        if(membershipType.canTrade(trade.getQuantity(), tradeValue)){
+            trade.setTradeCreatedAt(LocalDate.now());
+
+            return true;
+        }
+
+        return false;
     }
 }

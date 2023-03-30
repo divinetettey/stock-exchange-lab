@@ -3,6 +3,8 @@ package main.turntable.clients;
 public class MembershipType {
     private int minPoints;
     private int maxPoints;
+    private int maxTradesPerDay;
+
 
     public MembershipType() {
     }
@@ -26,5 +28,24 @@ public class MembershipType {
 
     public void setMaxPoints(int maxPoints) {
         this.maxPoints = maxPoints;
+    }
+
+    public int getMaxTradesPerDay() {
+        return maxTradesPerDay;
+    }
+
+    public void setMaxTradesPerDay(int maxTradesPerDay) {
+        this.maxTradesPerDay = maxTradesPerDay;
+    }
+
+    /**
+     *
+     * @param quantity
+     * @param tradeValue
+     * @return
+     */
+    public boolean canTrade(int quantity,double tradeValue){
+        double MAX_TRADE_VALUE = 10000;
+        return (quantity < this.getMaxTradesPerDay())  && (tradeValue < MAX_TRADE_VALUE);
     }
 }
