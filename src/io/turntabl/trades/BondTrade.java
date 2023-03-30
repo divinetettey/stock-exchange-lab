@@ -1,4 +1,4 @@
-package main.turntable.trades;
+package io.turntabl.trades;
 
 public class BondTrade  extends  Trade{
     final private double dividend;

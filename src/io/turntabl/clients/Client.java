@@ -1,9 +1,6 @@
-package main.turntable.clients;
+package io.turntabl.clients;
 
-import main.turntable.trades.Trade;
-
-import java.time.LocalDate;
-import java.time.chrono.ChronoLocalDate;
+import io.turntabl.trades.Trade;
 
 public class Client {
     private String firstName;

@@ -1,13 +1,6 @@
-package main.turntable;
+package io.turntabl;
 
-import main.turntable.clients.Bronze;
-import main.turntable.clients.Client;
-import main.turntable.clients.MembershipType;
-import main.turntable.trades.BondTrade;
-import main.turntable.trades.FundTrade;
-import main.turntable.trades.Trade;
-
-import java.time.LocalDateTime;
+import io.turntabl.trades.BondTrade;
 
 public class Exchange {
     public static void main(String [] args){

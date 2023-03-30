@@ -1,6 +1,6 @@
-package main.turntable;
+package io.turntabl;
 
-import main.turntable.trades.Trade;
+import io.turntabl.trades.Trade;
 
 public class Account {
     private double value;

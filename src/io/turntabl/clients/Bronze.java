@@ -1,6 +1,6 @@
-package main.turntable.clients;
+package io.turntabl.clients;
 
-import main.turntable.trades.Trade;
+import io.turntabl.trades.Trade;
 
 import java.time.LocalDateTime;
 

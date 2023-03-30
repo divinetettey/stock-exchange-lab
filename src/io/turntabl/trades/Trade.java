@@ -1,4 +1,4 @@
-package main.turntable.trades;
+package io.turntabl.trades;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
