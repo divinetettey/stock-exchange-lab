@@ -1,4 +1,4 @@
-package io.turntabl.clients;
+package io.turntabl.membership;
 
 import io.turntabl.trades.Trade;
 

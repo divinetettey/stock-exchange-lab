@@ -1,4 +1,4 @@
-package io.turntabl;
+package io.turntabl.accounts;
 
 import io.turntabl.trades.Trade;
 
@@ -7,6 +7,10 @@ public class Account {
 
     private Trade[] trades;
 
+    public Account(double value, Trade[] trades) {
+        this.value = value;
+        this.trades = trades;
+    }
     public Account() {
         this.trades = new Trade[10];
     }
@@ -19,6 +23,13 @@ public class Account {
         return this.trades;
     }
 
+    public double getValue() {
+        return value;
+    }
+
+    public void setValue(double value) {
+        this.value = value;
+    }
 
     /**
      * get total value of account 

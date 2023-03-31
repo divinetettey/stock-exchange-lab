@@ -1,4 +1,4 @@
-package io.turntabl.clients;
+package io.turntabl.membership;
 
 public class Silver extends MembershipType{
     private final int MAX_TRADES_PER_DAY = 10;

@@ -1,10 +1,9 @@
 package io.turntabl.trades;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 public abstract class Trade {
-    private String ID;
+    private String id;
     private String symbol;
     private int quantity;
     private double price;
@@ -15,8 +14,8 @@ public abstract class Trade {
 
     }
 
-    public Trade(String ID, String symbol, int quantity, double price){
-        this.ID = ID;
+    public Trade(String id, String symbol, int quantity, double price){
+        this.id = id;
         this.symbol = symbol;
         this.quantity = quantity;
         this.price = price;
@@ -24,16 +23,16 @@ public abstract class Trade {
         tradeCreatedAt = LocalDateTime.now();
     }
 
-    public Trade(String ID, String symbol, int quantity) {
-        this(ID,symbol, quantity, 0.0);
+    public Trade(String id, String symbol, int quantity) {
+        this(id,symbol, quantity, 0.0);
     }
 
-    public String getID() {
-        return ID;
+    public String getId() {
+        return id;
     }
 
-    public void setID(String ID) {
-        this.ID = ID;
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getSymbol() {
@@ -75,7 +74,7 @@ public abstract class Trade {
     public String toString() {
 
         return "\nTRADE DETAILS " +
-                "\nID: "+ID +
+                "\nID: "+ id +
                 "\nSymbol:  "+ symbol +
                 "\nQuantity: "+ quantity +
                 "\nPrice: "+ price +

@@ -1,5 +1,6 @@
 package io.turntabl.clients;
 
+import io.turntabl.membership.MembershipType;
 import io.turntabl.trades.Trade;
 
 public class Client {
@@ -65,6 +66,7 @@ public class Client {
      */
     public boolean  addTrade(Trade trade) {
         if(membershipType == null){
+            pointsGained++;
             return true;
         }
 

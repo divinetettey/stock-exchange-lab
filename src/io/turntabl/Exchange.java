@@ -1,5 +1,6 @@
 package io.turntabl;
 
+import io.turntabl.accounts.Account;
 import io.turntabl.trades.BondTrade;
 
 public class Exchange {
@@ -46,10 +47,12 @@ public class Exchange {
 
         Account account = new Account();
         BondTrade[] bondTrades = new BondTrade[10];
-        for(int i = 0; i < 7; i++){
+        for(int i = 0; i < 10; i++){
             BondTrade trade = new BondTrade("T23","MSFT",i,i*12.35,13);
             bondTrades[i] = trade;
         }
+
+        account.setTrades(bondTrades);
 
         System.out.println("Total Values: "+account.getTotalValues());
 

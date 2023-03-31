@@ -1,5 +1,6 @@
 package io.turntabl;
 
+import io.turntabl.accounts.Account;
 import io.turntabl.trades.Trade;
 
 public class Trader {
